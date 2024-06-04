@@ -4869,7 +4869,7 @@ local Teleport = Tabs.Player:AddSection("Combat")
 
 
 local SlidershowFov = Tabs.Player:AddSlider("SlidershowFov", {
-    Title = "Cỡ Fov",
+    Title = "Bakış açısı boyutu",
     Description = "",
     Default = 100,
     Min = 0,
@@ -4886,14 +4886,14 @@ end)
 SlidershowFov:SetValue(100)
 
 
-local ToggleShowFov = Tabs.Player:AddToggle("ToggleShowFov", {Title = "Hiện Fov",Description = "", Default = false })
+local ToggleShowFov = Tabs.Player:AddToggle("ToggleShowFov", {Title = "Fov'u göster",Description = "", Default = false })
 ToggleShowFov:OnChanged(function(value)
     _G.Show_Fov = value
 end)
 Options.ToggleShowFov:SetValue(false)
 
 
-local ToggleAimBotSkill = Tabs.Player:AddToggle("ToggleAimBotSkill", {Title = "Tự Động ngắm Skill",Description = "", Default = false })
+local ToggleAimBotSkill = Tabs.Player:AddToggle("ToggleAimBotSkill", {Title = "Becerileri otomatik olarak hedefleyin",Description = "", Default = false })
 ToggleAimBotSkill:OnChanged(function(Value)
     _G.Aimbot_Skill_Fov = Value
 end)
@@ -5097,7 +5097,7 @@ Tabs.Teleport:AddButton({
 
 
 Tabs.Teleport:AddButton({
-    Title = "Sea 3a",
+    Title = "Sea 3",
     Description = "",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
@@ -5106,7 +5106,7 @@ Tabs.Teleport:AddButton({
 
 
 
-local Mastery = Tabs.Teleport:AddSection("Dịch Chuyển Đảo")
+local Mastery = Tabs.Teleport:AddSection("Ada Değişimi")
 
 if First_Sea then
  IslandList = {
@@ -6440,7 +6440,7 @@ Tabs.Misc:AddButton({
 	end
 })
 
-local Mastery = Tabs.Misc:AddSection("Mở Ui")
+local Mastery = Tabs.Misc:AddSection("Kullanıcı arayüzünü aç")
 
 Tabs.Misc:AddButton({
 	Title = "Soldaki dükkanı aç",
@@ -6485,10 +6485,10 @@ Tabs.Misc:AddButton({
 	end
 })
 
-local Mastery = Tabs.Misc:AddSection("Khác")
+local Mastery = Tabs.Misc:AddSection("Diğer")
 
 
-local ToggleRejoin = Tabs.Misc:AddToggle("ToggleRejoin", {Title = "Tự động vào lại khi bị văng", Description = "",Default = true })
+local ToggleRejoin = Tabs.Misc:AddToggle("ToggleRejoin", {Title = "Fırlatıldığında otomatik olarak yeniden girer", Description = "",Default = true })
 ToggleRejoin:OnChanged(function(Value)
 	_G.AutoRejoin = Value
 end)
