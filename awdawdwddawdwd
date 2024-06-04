@@ -2454,7 +2454,7 @@ ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "rbxassetid://16137232629"
+ImageButton.Image = "rbxassetid://5205790826"
 ImageButton.MouseButton1Down:connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
 end)
@@ -4201,7 +4201,7 @@ ToggleAutoW:OnChanged(function(Value)
         end
         for r, v in pairs(game:GetService("Workspace").Map.MysticIsland:GetDescendants()) do
             if v:IsA("MeshPart") then
-                if v.MeshId == "rbxassetid://16137232629" then
+                if v.MeshId == "rbxassetid://5205790826" then
                     return v
                 end
             end
@@ -6679,7 +6679,7 @@ Tabs.Misc:AddButton({
 		for k, v in pairs(cac) do
 			if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy" .. v, true) == 1 then
 				local huhu = Instance.new("ImageLabel", MeleeG)
-				huhu.Image = "rbxassetid://16137232629"
+				huhu.Image = "rbxassetid://5205790826"
 				huhu.ImageRectSize = Vector2.new(100, 100)
 				huhu.ImageRectOffset = ListHuhu[v] * 100
 			end
@@ -6780,9 +6780,9 @@ Options.ToggleFindMoon:SetValue(false)
 spawn(function()
     while wait() do
         if _G.AutoFindMoon then
-        if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=16137232629" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=16137232629" then
+        if game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=5205790826" or game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=5205790826" then
             wait(2.0)
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=16137232629" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=5205790826" then
             Hop()
             Fluent:Notify({
                 Title = "Salvadore Hub",
@@ -6790,7 +6790,7 @@ spawn(function()
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
             })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=16137232629" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=5205790826" then
             Hop()
             Fluent:Notify({
                 Title = "Salvadore Hub",
@@ -6798,7 +6798,7 @@ spawn(function()
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
             })
-        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=16137232629" then
+        elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=5205790826" then
             Hop()
             Fluent:Notify({
                 Title = "Salvadore Hub",
