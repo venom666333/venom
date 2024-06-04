@@ -2470,7 +2470,7 @@ local Farming = Tabs.Main:AddSection("Farming")
 local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
-        Title = "Chọn Tốc Độ Đánh",
+        Title = "Saldırı Hızını Seçin",
         Description = "",
         Values = listfastattack,
         Multi = false,
@@ -2489,7 +2489,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 end)
 
     local DropdownSelectWeapon = Tabs.Main:AddDropdown("DropdownSelectWeapon", {
-        Title = "Chọn Vũ Khí",
+        Title = "Silah Seç",
         Description = "",
         Values = {'Melee','Sword','Blox Fruit'},
         Multi = false,
@@ -2541,7 +2541,7 @@ end)
 
 
     local ToggleLevel = Tabs.Main:AddToggle("ToggleLevel", {
-        Title = "Cày Cấp Độ",
+        Title = "Seviye Kas",
         Description = "",
         Default = false })
     ToggleLevel:OnChanged(function(Value)
@@ -2603,7 +2603,7 @@ end)
 
 
 
-        local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Cày Kẹo ( Chỉ Cấp Độ Tối Đa )", Default = false })
+        local ToggleCandy = Tabs.Main:AddToggle("ToggleCandy", {Title = "Auto Farm Candy ( Only Max Level )",Description = "Şeker Yetiştiriciliği (Yalnızca Maksimum Seviye)", Default = false })
         ToggleCandy:OnChanged(function(Value)
            _G.AutoCandy = Value
            if Value == false then
@@ -2650,7 +2650,7 @@ end)
 			  end)
 
     local ToggleMobAura = Tabs.Main:AddToggle("ToggleMobAura", {
-        Title = "Đánh Quái Ở Gần",
+        Title = "Yakındaki Canavarlarla Savaşın",
         Description = "",
         Default = false })
     ToggleMobAura:OnChanged(function(Value)
@@ -2697,7 +2697,7 @@ end)
 
 
     local ToggleCastleRaid = Tabs.Main:AddToggle("ToggleCastleRaid", {
-        Title = "Đánh Hải Tặc ở Pháo Đài",
+        Title = "Kalede Korsanlarla Savaşın",
         Description = "", 
         Default = false })
     ToggleCastleRaid:OnChanged(function(Value)
@@ -2831,7 +2831,7 @@ Options.ToggleChest:SetValue(false)
 end
 
 local ToggleChestTween = Tabs.Main:AddToggle("ToggleChestTween", {
-    Title = "Nhặt Rương [Bay]",
+    Title = "Sandığı Al [Uç]",
     Description = "", 
     Default = false })
 ToggleChestTween:OnChanged(function(Value)
@@ -2863,7 +2863,7 @@ spawn(function()
 end)
 
       Tabs.Main:AddButton({
-        Title = "Nhập Hết Code",
+        Title = "Kodun Tamamını Girin",
         Description = "",
         Callback = function()
             RedeemCode()
@@ -2875,8 +2875,8 @@ end)
 	end
 
     Tabs.Main:AddButton({
-        Title = "Fix Lag",
-        Description = "",
+        Title = "Kasmayı Engelle",
+        Description = "Patates Grafik",
         Callback = function()
             FPSBooster()
         end
@@ -2926,7 +2926,7 @@ end)
 
 local Mastery = Tabs.Main:AddSection("Mastery Farm")
     local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
-        Title = "Chọn Chế Độ Cày Thông Thạo",
+        Title = "Ana Pulluk Modunu Seçin",
         Description = "",
         Values = {"Level","Near Mobs",},
         Multi = false,
@@ -2940,7 +2940,7 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
     end)
 
     local ToggleMasteryFruit = Tabs.Main:AddToggle("ToggleMasteryFruit", {
-        Title = "Cày Thông Thạo Trái Ác Quỷ",
+        Title = "Şeytan Meyvelerinde Ustalaşmak",
         Description = "", 
         Default = false })
     ToggleMasteryFruit:OnChanged(function(Value)
@@ -2951,7 +2951,7 @@ local Mastery = Tabs.Main:AddSection("Mastery Farm")
  
 
     local SliderHealt = Tabs.Main:AddSlider("SliderHealt", {
-        Title = "Phần Trăm Máu Quái",
+        Title = "Canavar Kanı Yüzdesi",
         Description = "",
         Default = 25,
         Min = 0,
@@ -3106,7 +3106,7 @@ end
 end
 end)
 
-local MiscFarm = Tabs.Main:AddSection("Farm Khác")
+local MiscFarm = Tabs.Main:AddSection("Çiftlik Diğer")
 
 if Third_Sea then
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {
@@ -3333,7 +3333,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
 
 
     local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-        Title = "Chọn Boss",
+        Title = "Boss Seç",
         Description = "",
         Values = tableBoss,
         Multi = false,
@@ -3346,7 +3346,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
     end)
 
 	local ToggleAutoFarmBoss = Tabs.Main:AddToggle("ToggleAutoFarmBoss", {
-        Title = "Giết Boss",
+        Title = "Bossu öldür",
         Description = "", 
         Default = false })
 
@@ -3388,7 +3388,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
     end)
 
 
-    local Material = Tabs.Main:AddSection("Farm Nguyên Liệu")
+    local Material = Tabs.Main:AddSection("Hammadde Çiftliği")
 
     if First_Sea then
         MaterialList = {
@@ -3403,7 +3403,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
         end
 
     local DropdownMaterial = Tabs.Main:AddDropdown("DropdownMaterial", {
-        Title = "Chọn Nguyên Liệu",
+        Title = "Malzemeleri Seçin",
         Description = "",
         Values = MaterialList,
         Multi = false,
@@ -3417,7 +3417,7 @@ local boss = Tabs.Main:AddSection("Farm Boss")
     end)
 
     local ToggleMaterial = Tabs.Main:AddToggle("ToggleMaterial", {
-        Title = "Cày Nguyên Liệu",
+        Title = "Hammaddelerin Sürülmesi",
         Description = "", 
         Default = false })
 
@@ -5567,7 +5567,7 @@ end)
 local Chips = {"Flame","Ice","Quake","Light","Dark","Spider","Rumble","Magma","Buddha","Sand","Phoenix","Dough"}
 
 local DropdownRaid = Tabs.Raid:AddDropdown("DropdownRaid", {
-    Title = "Chọn Chip",
+    Title = "Çip Seç",
     Description = "",
     Values = Chips,
     Multi = false,
@@ -5578,7 +5578,7 @@ DropdownRaid:OnChanged(function(Value)
     SelectChip = Value
 end)
 
-local ToggleBuy = Tabs.Raid:AddToggle("ToggleBuy", {Title = "Mua Chip", Description = "",Default = false })
+local ToggleBuy = Tabs.Raid:AddToggle("ToggleBuy", {Title = "Cips Satın Al", Description = "",Default = false })
 ToggleBuy:OnChanged(function(Value)
     _G.Auto_Buy_Chips_Dungeon = Value
 end)
@@ -5599,7 +5599,7 @@ spawn(function()
 end)
 
 
-    local ToggleStart = Tabs.Raid:AddToggle("ToggleStart", {Title = "Vào Raid",Description = "", Default = false })
+    local ToggleStart = Tabs.Raid:AddToggle("ToggleStart", {Title = "Raid'e girin",Description = "", Default = false })
     ToggleStart:OnChanged(function(Value)
         _G.Auto_StartRaid = Value
 end)
@@ -5624,7 +5624,7 @@ spawn(function()
 end)
 
 
-local ToggleKillAura = Tabs.Raid:AddToggle("ToggleKillAura", {Title = "Giết Quái",Description = "", Default = false })
+local ToggleKillAura = Tabs.Raid:AddToggle("ToggleKillAura", {Title = "Canavarları Öldür",Description = "", Default = false })
 ToggleKillAura:OnChanged(function(Value)
     KillAura = Value
 end)
@@ -5648,7 +5648,7 @@ spawn(function()
 end)
 
 
-local ToggleNextIsland = Tabs.Raid:AddToggle("ToggleNextIsland", {Title = "Qua Đảo",Description = "", Default = false })
+local ToggleNextIsland = Tabs.Raid:AddToggle("ToggleNextIsland", {Title = "Adanın üzerinde",Description = "", Default = false })
 ToggleNextIsland:OnChanged(function(Value)
     AutoNextIsland = Value
 end)
@@ -5677,7 +5677,7 @@ end)
 
 
 
-local ToggleAwake = Tabs.Raid:AddToggle("ToggleAwake", {Title = "Thức tỉnh V2",Description = "", Default = false })
+local ToggleAwake = Tabs.Raid:AddToggle("ToggleAwake", {Title = "Uyanış V2",Description = "", Default = false })
 ToggleAwake:OnChanged(function(Value)
     AutoAwakenAbilities = Value
 end)
@@ -5693,7 +5693,7 @@ spawn(function()
 end)
 
 
-local ToggleGetFruit = Tabs.Raid:AddToggle("ToggleGetFruit", {Title = "Lấy Trái Ít Bely",Description = "", Default = false })
+local ToggleGetFruit = Tabs.Raid:AddToggle("ToggleGetFruit", {Title = "Küçük Bely Meyvesini Alın",Description = "", Default = false })
 ToggleGetFruit:OnChanged(function(Value)
     _G.Autofruit = Value
 end)
@@ -5850,7 +5850,7 @@ end)
 
 if Second_Sea then
 Tabs.Raid:AddButton({
-    Title = "Chổ Tập Kích",
+    Title = "Baskın Yeri",
     Description = "",
     Callback = function()
         Tween2(CFrame.new(-6438.73535, 250.645355, -4501.50684))
@@ -5858,7 +5858,7 @@ Tabs.Raid:AddButton({
 })
 elseif Third_Sea then
     Tabs.Raid:AddButton({
-        Title = "Chổ Tập Kích",
+        Title = "Baskın Yeri",
         Description = "",
         Callback = function()
             Tween2(CFrame.new(-5017.40869, 314.844055, -2823.0127, -0.925743818, 4.48217499e-08, -0.378151238, 4.55503146e-09, 1, 1.07377559e-07, 0.378151238, 9.7681621e-08, -0.925743818))
@@ -5871,7 +5871,7 @@ end
 local Mastery = Tabs.Raid:AddSection("Law Raid")
 
 
-local ToggleLaw = Tabs.Raid:AddToggle("ToggleLaw", {Title = "Tự mua chip + Đánh boss law",Description = "", Default = false })
+local ToggleLaw = Tabs.Raid:AddToggle("ToggleLaw", {Title = "Kendi çiplerinizi satın alın + Patron kanunlarıyla savaşın",Description = "", Default = false })
 
 ToggleLaw:OnChanged(function(Value)
     Auto_Law = Value
